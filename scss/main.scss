@@ -1,0 +1,124 @@
+@import 'vars';
+@import 'fonts';
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font;
+	height: 100%;
+}
+
+ul, ol {
+	list-style-type: none;
+}
+
+#app {
+	width: 100%;
+	background: #e5e5e5;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.films {
+	width: 870px;
+	background: #fff;
+	.films_content {
+		padding: 30px;
+
+		h1 {
+			margin-bottom: 20px;
+			font: bold 24px/34px Tahoma, sans-serif;
+			color: #222d35;
+		}
+
+		.search_form {
+			position: relative;
+
+			#film_input {
+				width: 100%;
+				height: 40px;
+				background: #fff;
+				border: 1px solid #e4e4e4;
+				box-sizing: border-box;
+				border-radius: 4px;
+				font: 15px/20px Tahoma, sans-serif;
+				padding: 0 15px 0 40px;
+				color: #666;
+
+				&::-webkit-input-placeholder { color: #c3d0d8; }
+				 &:-ms-input-placeholder { color: #c3d0d8; }
+				 &::-ms-input-placeholder { color: #c3d0d8; }
+				&::placeholder { color: #c3d0d8; }
+				&::-moz-placeholder {color: #c3d0d8; /* Цвет подсказывающего текста */}
+				&:-moz-placeholder {color: #c3d0d8; /* Цвет подсказывающего текста */}
+			}
+
+			.search_btn {
+				position: absolute;
+				top: 10px;
+				left: 11px;
+				width: 25px;
+				height: 25px;
+				cursor: pointer;
+				> i {
+					font-size: 18px;
+					color: #bfbfbf;
+				}
+			}
+		}
+
+
+		.films_list {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin-top: 22px;
+
+			.film {
+				width: 258px;
+				border-radius: 4px;
+				border: 1px solid #ccc;
+				margin-bottom: 22px;
+
+				.film_img {
+					width: 100%;
+					font-size: 0;
+					height: 84px;
+					overflow: hidden;
+					border-top-right-radius: 4px;
+					border-top-left-radius: 4px;
+
+					> img {
+						width: 100%;
+					}
+				}
+
+				.film_desc {
+					padding: 15px 10px 20px;
+					height: 90px;
+					border-top: 1px solid #ccc;
+
+					.film_title {
+						font: 15px/20px Tahoma, sans-serif;
+						color: #108ce5;
+						margin-bottom: 3px;
+					}
+					.film_producer {
+						font: 12px/16px Tahoma, sans-serif;
+						color: #536069;
+					}
+
+				}
+			}
+		}
+	}
+}
