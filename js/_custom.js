@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		.then((data) => {
 			for (let i = 0; i < data.results.length; i++) {
 				if (searchStr !== '' && searchStr !== undefined) {
-					if (data.results[i].title.indexOf(searchStr) < 0) {
+					if (data.results[i].title.toLowerCase().indexOf(searchStr.toLowerCase()) < 0) {
 						continue;
 					}
 				}
@@ -51,5 +51,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			getFilms(searchStr);
 		}
 	}
+
+	$('#film_input').keypress(function(e) {
+		if (e.which == 13) {
+			e.preventDefault();
+			return false;
+		}
+	});
 
 });
