@@ -86,7 +86,7 @@ ul, ol {
 			.film {
 				width: 258px;
 				border-radius: 4px;
-				border: 1px solid #ccc;
+				box-shadow: 0 0 9px rgba(0, 0, 0, .15);
 				margin-bottom: 22px;
 
 				.film_img {
